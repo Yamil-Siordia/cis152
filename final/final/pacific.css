@@ -121,7 +121,8 @@ footer {
 #homehero,
 #yurthero,
 #trailhero,
-#reservations-hero {
+#reservations-hero 
+#aboutus-hero {
   background-repeat: no-repeat; /* bgr: norepeat */
   background-size: cover; /* bgs: cover */
   height: 18.75rem; /* h: 18.75rem */
@@ -139,11 +140,6 @@ footer {
   background-image: url(images/reservations.jpg); /* bgimg:url (reservations/trail.jpg) */
 }
 
-#aboutus-hero {
-    max-height: 500px;
-    overflow: hidden;
-    border-bottom: 2px solid #000033;
-}
 
 #aboutus-hero img {
     width: 100%;
@@ -567,13 +563,55 @@ input[type="submit"] {
         max-width: 100%;
     }
 }
+.our-goal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.our-goal .text-content {
+    flex: 2;
+}
+.our-goal .Information {
+    flex: 1;
+    background-color: #f5f2eb;
+    padding: 1rem;
+    border-radius: 0.5em;
+}
+.visit-us {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.visit-us .text-content {
+    flex: 1.2;
+}
+.aboutus-img {
+    flex: 1;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 48rem) {
+  .our-goal-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
 
 @media screen and (max-width: 768px) {
-    .visit-Us-section {
+    .our-goal,
+    .visit-us {
         flex-direction: column;
     }
-
-    .visit-image {
+    .aboutus-img {
         max-width: 100%;
     }
 }
